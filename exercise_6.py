@@ -1,9 +1,9 @@
 def getDivisors(n, num_list):
-    total = 0
-    for i in num_list:
-        if(n%i == 0):
-            total += i
+    for i in n:
+        total = 0
+        for j in num_list:
+            if(i%j == 0):
+                total += j
+        print(f"Sum of multiples of {i} is {total}")
 
-    return total
-
-print(getDivisors(9,[1,2,3,4,5,6,7,8,9,10]))
+getDivisors([8,9],[1,2,3,4,5,6,7,8,9,10])
